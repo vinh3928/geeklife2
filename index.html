@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Pokemon Battle</title>
+  </head>
+  <body>
+    <form action="google.com" method="post">
+      <fieldset class="select_screen">
+        <legend>Choose a pokemon</legend>
+        <label for="pikachu">pikachu</label>
+        <input type="radio" name="pokemon" id="pikachu" value="pikachu" />
+        <label for="bulbasaur">bulbasaur</label>
+        <input type="radio" name="pokemon" id="bulbasaur" value="bulbasaur" />
+      </fieldset>
+      <fieldset class="start_screen">
+        <button class="back_select" type="button">Choose a different pokemon</button>
+        <button class="battle_select" type="button">Battle your opponent!</button>
+      </fieldset>
+      <fieldset class="battle_screen">
+      </fieldset>
+    </form>
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/form.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

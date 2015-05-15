@@ -15,7 +15,7 @@ var grass = {
   earth: 2
 }
 
-//attacks 
+//attacks
 var shock = {
   min: 4,
   max: 10
@@ -74,6 +74,8 @@ var darth = {
   beginHealth: 50,
   armor: 2,
 }
+
+
 // creates a random generated base damage
 var hit = function(min, max) {
   return Math.floor(Math.random() * (max + 1 - min)) + min;
@@ -130,4 +132,3 @@ var battleSecAttack = function(attacker, defender) {
     return attacker.name + "'s attack miss " + defender.name
   }
 }
-

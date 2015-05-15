@@ -15,7 +15,7 @@ $("#mario").click(function () {
 });
 
 $("#darth-vader").click(function () {
-  $(".start_screen").prepend("<img class='profile' src='img/mario.jpg'>");
+  $(".start_screen").prepend("<img class='profile' src='img/darth.jpg'>");
   $(".select_screen").hide();
   pokemonChoosen = $.extend(true, {}, darth);
 });
@@ -126,4 +126,3 @@ $(".battle_screen").on("click", ".sec_attack_button", function () {
   $(".sec_attack_button").hide();
   $(".attack_button").show();
 });
-

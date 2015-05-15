@@ -77,8 +77,9 @@ var attacking = function(attacker, defender) {
 
 // secondary attack
 var secAttack = function(attacker, defender) {
-  var damage = hit(attacker.attackSecondary.min, attacker.attackSecondary.max)
+  var damage = hit(attacker.secondaryAttack.min, attacker.secondaryAttack.max)
   var netDamage = damage/defender.armor
+  return Math.ceil(netDamage)
 }
 
 // this might be obsolete with a global health variabe; keeps track of health

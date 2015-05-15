@@ -21,47 +21,59 @@ var shock = {
   max: 10
 }
 
-var leaf = {
+var turtle = {
   min: 4,
   max: 10
 }
 
-var scratch = {
+var money = {
+  min: 4,
+  max: 50
+}
+
+var star = {
   min: 4,
   max: 6
 }
 
-var whip = {
-  min: 4,
-  max: 6
-}
-
-var pikachu = {
+var billgates = {
   type: "electric",
-  name: "pikachu",
+  name: "billgates",
   matchup: electric,
   attack: shock,
-  attackName: "shock",
-  secondaryAttack: scratch,
-  secondaryAttackName: "scratch",
+  attackName: "release mosquito",
+  secondaryAttack: money,
+  secondaryAttackName: "throw money",
   health: 50,
   beginHealth: 50,
   armor: 2,
 }
 
-var bulbasaur = {
+var mario = {
   type: "grass",
-  name: "bulbasaur",
+  name: "Mario",
   matchup: grass,
-  attack: leaf,
-  attackName: "leaf",
-  secondaryAttack: whip,
-  secondaryAttackName: "whip",
+  attack: turtle,
+  attackName: "Throw Turtle Shell",
+  secondaryAttack: star,
+  secondaryAttackName: "Star Power",
   health: 50,
   beginHealth: 50,
   armor: 3
 }
 
+var darth = {
+  type: "electric",
+  name: "Darth Vader",
+  matchup: electric,
+  attack: shock,
+  attackName: "light saber",
+  secondaryAttack: money,
+  secondaryAttackName: "fartherless",
+  health: 50,
+  beginHealth: 50,
+  armor: 2,
+}
 // creates a random generated base damage
 var hit = function(min, max) {
   return Math.floor(Math.random() * (max + 1 - min)) + min;

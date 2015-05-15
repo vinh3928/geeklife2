@@ -4,14 +4,20 @@ var pokemonChoosen = {}, cpuPokemon = {};
 $("#billgates").click(function () {
   $(".start_screen").prepend("<img class='profile' src='img/billgates.jpg'>");
   $(".select_screen").hide();
-  pokemonChoosen = $.extend(true, {}, pikachu);
+  pokemonChoosen = $.extend(true, {}, billgates);
 });
 
 // bulbasaur selection
 $("#mario").click(function () {
   $(".start_screen").prepend("<img class='profile' src='img/mario.jpg'>");
   $(".select_screen").hide();
-  pokemonChoosen = $.extend(true, {}, bulbasaur);
+  pokemonChoosen = $.extend(true, {}, mario);
+});
+
+$("#darth-vader").click(function () {
+  $(".start_screen").prepend("<img class='profile' src='img/mario.jpg'>");
+  $(".select_screen").hide();
+  pokemonChoosen = $.extend(true, {}, darth);
 });
 
 // back to select screen
@@ -35,9 +41,9 @@ $(".battle_select").click(function () {
 // generating random opponent
   var randGen = Math.random();
   if (randGen < 0.5) {
-    cpuPokemon = $.extend(true, {}, pikachu);
+    cpuPokemon = $.extend(true, {}, billgates);
   } else {
-    cpuPokemon = $.extend(true, {}, bulbasaur);
+    cpuPokemon = $.extend(true, {}, mario);
   }
 });
 

@@ -6,3 +6,11 @@
 body {
   background: white;
 }
+
+.profile2 {
+  float: right;
+}
+
+button {
+  font-size: 20px;
+}

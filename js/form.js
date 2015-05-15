@@ -15,7 +15,7 @@ $("#mario").click(function () {
 });
 
 $("#darth-vader").click(function () {
-  $(".start_screen").prepend("<img class='profile' src='img/mario.jpg'>");
+  $(".start_screen").prepend("<img class='profile' src='img/darth.jpg'>");
   $(".select_screen").hide();
   pokemonChoosen = $.extend(true, {}, darth);
 });
@@ -40,10 +40,15 @@ $(".battle_select").click(function () {
   $(".battle_screen").prepend("<button class='restart_button' type='button'>Restart</button>");
 // generating random opponent
   var randGen = Math.random();
-  if (randGen < 0.5) {
+  if (randGen < 0.33) {
     cpuPokemon = $.extend(true, {}, billgates);
-  } else {
+  $(".start_screen").prepend("<img class='profile2' src='img/billgates.jpg'>");
+  } else if (randGen < 0.66) {
     cpuPokemon = $.extend(true, {}, mario);
+  $(".start_screen").prepend("<img class='profile2' src='img/mario.jpg'>");
+  } else {
+    cpuPokemon = $.extend(true, {}, darth);
+  $(".start_screen").prepend("<img class='profile2' src='img/darth.jpg'>");
   }
 });
 

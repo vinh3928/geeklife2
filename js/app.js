@@ -33,7 +33,7 @@ var money = {
 
 var star = {
   min: 4,
-  max: 6
+  max: 50
 }
 
 var billgates = {

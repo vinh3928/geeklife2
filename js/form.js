@@ -1,9 +1,16 @@
 var pokemonChoosen = {}, cpuPokemon = {};
 
+$(document).ready(function() {
+  $(".battle_select").hide();
+  $(".back_select").hide();
+});
+
 // pikachu selection
 $("#billgates").click(function () {
   $(".start_screen").prepend("<img class='profile' src='img/billgates.jpg'>");
   $(".select_screen").hide();
+  $(".battle_select").show();
+  $(".back_select").show();
   pokemonChoosen = $.extend(true, {}, billgates);
 });
 
@@ -11,12 +18,16 @@ $("#billgates").click(function () {
 $("#mario").click(function () {
   $(".start_screen").prepend("<img class='profile' src='img/mario.jpg'>");
   $(".select_screen").hide();
+  $(".battle_select").show();
+  $(".back_select").show();
   pokemonChoosen = $.extend(true, {}, mario);
 });
 
 $("#darth-vader").click(function () {
   $(".start_screen").prepend("<img class='profile' src='img/darth.jpg'>");
   $(".select_screen").hide();
+  $(".battle_select").show();
+  $(".back_select").show();
   pokemonChoosen = $.extend(true, {}, darth);
 });
 
@@ -24,6 +35,8 @@ $("#darth-vader").click(function () {
 $(".back_select").click(function () {
   $(".profile").remove();
   $(".select_screen").show();
+  $(".battle_select").hide();
+  $(".back_select").hide();
 });
 
 // initalizing battle screen
@@ -56,6 +69,17 @@ $(".battle_select").click(function () {
 function addText(elId,text) {
       document.getElementById(elId).value += text;
 }
+
+$(".battle_screen").on("click", ".restart_button", function () {
+  $("#battle_display").remove();
+  $(".attack_button").remove();
+  $(".main_attack_button").remove();
+  $(".sec_attack_button").remove();
+  $(".restart_button").remove();
+  $(".profile").remove();
+  $(".profile2").remove();
+  $(".select_screen").show();
+});
 
 // attack button split
 $(".battle_screen").on("click", ".attack_button", function () {
